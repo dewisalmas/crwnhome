@@ -22,7 +22,10 @@ import UIKit
         @IBOutlet weak var labelMoviePublisher: UILabel!
         @IBOutlet weak var labelMovieSynopsis: UILabel!
         @IBOutlet weak var moviePoster: UIImageView!
+        @IBOutlet weak var btnSwitchVote: UISwitch!
+        @IBOutlet weak var labelVote: UILabel!
         
+         var tempvote:Int=0
         override func viewDidLoad() {
         super.viewDidLoad()
             labelMovieTitle.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].title
@@ -40,17 +43,53 @@ import UIKit
             
             labelMovieLocation.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].location
             
-            labelMovieDatePublish.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].publishedDate
+        labelMovieDatePublish.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].publishedDate
             
-            labelMovieNumVote.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].totvote.description
+        labelMovieNumVote.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].totvote.description
             
-            labelMoviePublisher.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].publisher
+        labelMoviePublisher.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].publisher
             
             moviePoster.image=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].poster
+            
+            if homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].vote==false{
+                btnSwitchVote.isOn=false
+                labelVote.text="Vote"
+            }else{
+                btnSwitchVote.isOn=true
+                labelVote.text="Unvote"
+            }
+          
+            
         // Do any additional setup after loading the view.
     }
     
-
+        @IBAction func switchVote(_ sender: UISwitch) {
+            if homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].vote==false{
+                tempvote=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].totvote+1
+                
+                    homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].vote=true
+                
+                btnSwitchVote.isOn=true
+                homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].totvote=tempvote
+                
+                    labelMovieNumVote.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].totvote.description
+                
+                labelVote.text="Unvote"
+            }else{
+                tempvote=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].totvote-1
+                
+                homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].vote=false
+                
+                btnSwitchVote.isOn=false
+                homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].totvote=tempvote
+                
+                labelMovieNumVote.text=homeListSreenViewController.GlobalVariable.videos[homeListSreenViewController.GlobalVariable.myIndex].totvote.description
+                
+                labelVote.text="Vote"
+            }
+            
+        }
+        
     /*
     // MARK: - Navigation
 

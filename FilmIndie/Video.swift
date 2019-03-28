@@ -23,9 +23,10 @@ class Video {
     var publisher: String
     var publishedDate: String
     var screeningDate: String
+    var vote: Bool
     
     
-    init(image: UIImage, title: String, director: String, genre: String, synopsis: String, duration: String, year: String, location: String, poster: UIImage, totvote: Int, publisher: String, publishedDate: String, screeningDate: String){
+    init(image: UIImage, title: String, director: String, genre: String, synopsis: String, duration: String, year: String, location: String, poster: UIImage, totvote: Int, publisher: String, publishedDate: String, screeningDate: String, vote: Bool){
         self.image=image
         self.title=title
         self.director=director
@@ -39,6 +40,6 @@ class Video {
         self.publisher=publisher
         self.publishedDate=publishedDate
         self.screeningDate=screeningDate
-        
+        self.vote=vote
     }
 }
