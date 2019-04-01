@@ -5,6 +5,7 @@
 //  Created by Dewi Salma Salsabila on 28/03/19.
 //  Copyright © 2019 claudia kenyta. All rights reserved.
 //
+//ANGGAP AJA INI DATABASE NYA
 
 import Foundation
 import UIKit

@@ -19,12 +19,22 @@ class homeListSreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+              GlobalVariable.videos = createArray()
+        /*else{
+        var addvideo02=Video(image: #imageLiteral(resourceName: "parachute-4078833_640"), title: "coba", director: "coba", genre: "coba", synopsis: "coba", duration: "coba", year: "coba", location: "coba", poster: #imageLiteral(resourceName: "Untitled"), totvote: 0, publisher: "coba", publishedDate: "coba", screeningDate: "coba", vote: false)
+        GlobalVariable.videos.append(addvideo02)
+        }*/
         
-        GlobalVariable.videos = createArray()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         tableView.delegate=self
         tableView.dataSource=self
-        // Do any additional setup after loading the view.
+        
+        tableView.reloadData()
     }
     
     func createArray() -> [Video]{
@@ -48,9 +58,12 @@ class homeListSreenViewController: UIViewController {
         
         return tempVideos
     }
+    
+//CODING ACTION APA AJA DI PAGE INI
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         GlobalVariable.myIndex=indexPath.row
+        MovieDetailViewController.GlobalVariable.globalIndex=GlobalVariable.myIndex
         performSegue(withIdentifier: "segue", sender: self)
     }
 }

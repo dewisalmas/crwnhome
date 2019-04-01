@@ -18,6 +18,7 @@
 		B16077BD224C04E400210DFC /* videoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16077BC224C04E400210DFC /* videoCellTableViewCell.swift */; };
 		B16077BF224C06EC00210DFC /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16077BE224C06EC00210DFC /* Video.swift */; };
 		B16077C1224C930000210DFC /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16077C0224C930000210DFC /* MovieDetailViewController.swift */; };
+		B16077C9224DE60000210DFC /* votedListScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16077C8224DE60000210DFC /* votedListScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B16077BC224C04E400210DFC /* videoCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = videoCellTableViewCell.swift; sourceTree = "<group>"; };
 		B16077BE224C06EC00210DFC /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		B16077C0224C930000210DFC /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		B16077C8224DE60000210DFC /* votedListScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = votedListScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +109,11 @@
 			children = (
 				55DE2B3D2248D73800E30195 /* AppDelegate.swift */,
 				55DE2B3F2248D73800E30195 /* ViewController.swift */,
-				B16077BA224BFCAF00210DFC /* homeListSreenViewController.swift */,
-				B16077BC224C04E400210DFC /* videoCellTableViewCell.swift */,
 				B16077BE224C06EC00210DFC /* Video.swift */,
+				B16077BC224C04E400210DFC /* videoCellTableViewCell.swift */,
 				B16077C0224C930000210DFC /* MovieDetailViewController.swift */,
+				B16077BA224BFCAF00210DFC /* homeListSreenViewController.swift */,
+				B16077C8224DE60000210DFC /* votedListScreenViewController.swift */,
 				55DE2B412248D73800E30195 /* Main.storyboard */,
 				55DE2B442248D73900E30195 /* Assets.xcassets */,
 				55DE2B492248D73900E30195 /* Info.plist */,
@@ -274,6 +277,7 @@
 				55DE2B3E2248D73800E30195 /* AppDelegate.swift in Sources */,
 				B16077C1224C930000210DFC /* MovieDetailViewController.swift in Sources */,
 				B16077BF224C06EC00210DFC /* Video.swift in Sources */,
+				B16077C9224DE60000210DFC /* votedListScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
